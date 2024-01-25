@@ -64,13 +64,13 @@ if st.button("Clasificar :apple:"):
         model = joblib.load("./models/nvb.pkl")
 
     p = {
-        'Size': Size,
-        'Weight': Weight,
-        'Sweetness': Sweetness,
-        'Crunchiness': Crunchiness,
-        'Juiciness': Juiciness,
-        'Ripeness': Ripeness,
-        'Acidity': Acidity
+        'Size': [Size],
+        'Weight': [Weight],
+        'Sweetness': [Sweetness],
+        'Crunchiness': [Crunchiness],
+        'Juiciness': [Juiciness],
+        'Ripeness': [Ripeness],
+        'Acidity': [Acidity]
     }
     p = pd.DataFrame(p)
     res = model.predict(p)
