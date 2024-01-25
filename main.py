@@ -35,7 +35,7 @@ Weight = col2.number_input("Peso",min_value=-6.00,max_value=4.00,value=0.0)
 # col3:
 Sweetness = col3.number_input("Dulzor",min_value=-6.00,max_value=6.00,value=0.0)
 # col4:
-Crunchiness = col4.number_input("Crujiente",min_value=-6.00,max_value=4.00,value=0.0)
+Crunchiness = col4.number_input("Crujiente",min_value=-6.00,max_value=5.00,value=0.0)
 
 
 col1b, col2b, col3b = st.columns(3)
@@ -52,7 +52,7 @@ st.subheader("Selección del Modelo :robot_face:")
 
 models_dict = {"Random Forest Classifier":1,"Logistic Regression":2,"Naive Bayes":3}
 
-model_choice = st.selectbox("Seleccione un modelo para usar",[x for x in models_dict.values()])
+model_choice = st.selectbox("Seleccione un modelo para usar",[x for x in models_dict.keys()])
 
 st.divider()
 if st.button("Clasificar :apple:"):
